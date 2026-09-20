@@ -147,8 +147,19 @@
   if (form) {
     form.addEventListener("submit", () => {
       const email = (document.getElementById("feedback-email").value || "").trim();
-      const reply = document.getElementById("replyto");
-      if (reply) reply.value = email;
+      let reply = document.getElementById("replyto");
+      if (email) {
+        if (!reply) {
+          reply = document.createElement("input");
+          reply.type = "hidden";
+          reply.name = "_replyto";
+          reply.id = "replyto";
+          form.appendChild(reply);
+        }
+        reply.value = email;
+      } else if (reply) {
+        reply.remove();
+      }
     });
   }
 })();
