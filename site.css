@@ -157,10 +157,16 @@ h1 {
 }
 
 .bio {
-  margin: 0 0 22px;
+  margin: 0 auto 22px;
+  max-width: 34em;
   font-size: 13px;
-  line-height: 1.5;
+  line-height: 1.55;
   color: rgba(255, 255, 255, 0.55);
+}
+
+.bio .ig {
+  display: block;
+  margin-top: 8px;
 }
 
 .ig {
