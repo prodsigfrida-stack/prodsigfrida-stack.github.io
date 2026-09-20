@@ -6,6 +6,14 @@
 
 * { box-sizing: border-box; }
 
+@view-transition {
+  navigation: auto;
+}
+
+html {
+  background: var(--ink);
+}
+
 html, body {
   margin: 0;
   min-height: 100%;
@@ -19,7 +27,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 36px 20px 48px;
+  padding: 72px 20px 48px;
   background:
     radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255, 37, 192, 0.22), transparent 55%),
     radial-gradient(ellipse 60% 40% at 50% 110%, rgba(255, 37, 192, 0.08), transparent 50%),
@@ -29,17 +37,63 @@ body {
 main {
   width: min(420px, 100%);
   text-align: center;
+  view-transition-name: page;
 }
 
 .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
   display: flex;
   justify-content: center;
   gap: 22px;
-  margin: 0 0 28px;
+  margin: 0;
+  padding: 20px 20px 28px;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+  background: linear-gradient(to bottom, rgba(7, 5, 7, 0.95) 35%, transparent);
+  view-transition-name: site-nav;
+}
+
+@keyframes page-out {
+  to { opacity: 0; transform: translateY(-10px); }
+}
+
+@keyframes page-in {
+  from { opacity: 0; transform: translateY(16px); }
+}
+
+::view-transition-old(page) {
+  animation: 260ms ease both page-out;
+}
+
+::view-transition-new(page) {
+  animation: 420ms cubic-bezier(0.22, 1, 0.36, 1) both page-in;
+}
+
+::view-transition-old(site-nav),
+::view-transition-new(site-nav) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-group(site-nav) {
+  z-index: 30;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+
+  ::view-transition-old(page),
+  ::view-transition-new(page) {
+    animation: none;
+  }
 }
 
 .nav a {
