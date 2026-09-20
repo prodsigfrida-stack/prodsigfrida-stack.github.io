@@ -111,8 +111,12 @@ body {
   text-align: center;
 }
 
+.card-download {
+  width: min(520px, 100%);
+}
+
 .byline {
-  margin: 0 0 8px;
+  margin: 0 0 16px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   font-size: 11px;
@@ -121,7 +125,7 @@ body {
 }
 
 h1 {
-  margin: 0 0 12px;
+  margin: 0 0 8px;
   font-weight: 600;
   font-size: clamp(1.35rem, 4vw, 1.7rem);
   letter-spacing: 0.04em;
@@ -146,10 +150,28 @@ h1 {
 .features li { margin: 0 0 6px; }
 
 .specs {
-  margin: 0 0 22px;
+  margin: 0 0 16px;
   font-size: 12px;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.45);
+}
+
+.bio {
+  margin: 0 0 22px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.ig {
+  color: var(--pink);
+  text-decoration: none;
+}
+
+.ig:hover,
+.ig:focus-visible {
+  color: var(--pink-hot);
+  outline: none;
 }
 
 .cta,
@@ -213,10 +235,24 @@ a.os:hover,
 a.os:focus-visible { transform: translateY(-1px); }
 
 .version {
-  margin: -4px 0 18px;
+  margin: 0 0 18px;
   color: rgba(255, 255, 255, 0.45);
   font-size: 13px;
   min-height: 1.2em;
+}
+
+.hint {
+  margin: 22px 0 0;
+  font-size: 12px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.48);
+  text-align: left;
+}
+
+.hint code {
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 10px;
+  color: var(--pink-hot);
 }
 
 .note {
