@@ -8,4 +8,8 @@
     <loc>https://prodsigfrida-stack.github.io/bass-harmonizer-updates/</loc>
     <changefreq>weekly</changefreq>
   </url>
+  <url>
+    <loc>https://prodsigfrida-stack.github.io/contact/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>

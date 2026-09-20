@@ -3,167 +3,52 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SIGFRIDA — audio plugins</title>
-  <meta name="description" content="SIGFRIDA makes free audio plugins. BASS HARMONIZER is a bass pitch-harmonizer for Windows and Mac (VST3 / AU).">
+  <title>BASS HARMONIZER — free bass harmonizer VST3 / AU plugin by SIGFRIDA</title>
+  <meta name="description" content="BASS HARMONIZER is a free bass pitch-harmonizer plugin by SIGFRIDA. VST3 on Windows, VST3 and Audio Unit on Mac. Add a tuned harmony voice to bass, 808s, and low end.">
   <link rel="canonical" href="https://prodsigfrida-stack.github.io/">
+  <link rel="stylesheet" href="site.css">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="SIGFRIDA — audio plugins">
-  <meta property="og:description" content="Free audio plugins by SIGFRIDA, including BASS HARMONIZER for Windows and Mac.">
+  <meta property="og:title" content="BASS HARMONIZER — free bass harmonizer plugin by SIGFRIDA">
+  <meta property="og:description" content="Free VST3 / AU bass pitch-harmonizer for Windows and macOS. Add a tuned harmony voice to bass and 808s.">
   <meta property="og:url" content="https://prodsigfrida-stack.github.io/">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "SIGFRIDA",
+    "@type": "SoftwareApplication",
+    "name": "BASS HARMONIZER",
+    "applicationCategory": "MultimediaApplication",
+    "applicationSubCategory": "Audio plugin",
+    "operatingSystem": "Windows, macOS",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "author": { "@type": "Person", "name": "SIGFRIDA" },
     "url": "https://prodsigfrida-stack.github.io/",
-    "email": "prod.sigfrida@gmail.com",
-    "makesOffer": {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "SoftwareApplication",
-        "name": "BASS HARMONIZER",
-        "applicationCategory": "MultimediaApplication",
-        "url": "https://prodsigfrida-stack.github.io/bass-harmonizer-updates/"
-      },
-      "price": "0",
-      "priceCurrency": "USD"
-    }
+    "downloadUrl": "https://prodsigfrida-stack.github.io/bass-harmonizer-updates/",
+    "description": "Free bass pitch-harmonizer plugin by SIGFRIDA. VST3 for Windows, VST3 and Audio Unit for macOS."
   }
   </script>
-  <style>
-    :root {
-      --pink: #ff25c0;
-      --pink-hot: #ff6ad5;
-      --ink: #070507;
-    }
-
-    * { box-sizing: border-box; }
-
-    html, body {
-      margin: 0;
-      min-height: 100%;
-      background: var(--ink);
-      color: #fff;
-      font-family: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
-    }
-
-    body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 20px 56px;
-      background:
-        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255, 37, 192, 0.22), transparent 55%),
-        radial-gradient(ellipse 60% 40% at 50% 110%, rgba(255, 37, 192, 0.08), transparent 50%),
-        var(--ink);
-    }
-
-    main {
-      width: min(560px, 100%);
-      text-align: center;
-    }
-
-    .byline {
-      margin: 0 0 8px;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--pink);
-    }
-
-    h1 {
-      margin: 0 0 14px;
-      font-weight: 600;
-      font-size: clamp(1.6rem, 4vw, 2.1rem);
-      letter-spacing: 0.12em;
-    }
-
-    .lead {
-      margin: 0 0 32px;
-      font-size: 15px;
-      line-height: 1.55;
-      color: rgba(255, 255, 255, 0.72);
-    }
-
-    .plugin {
-      display: block;
-      padding: 22px 20px 20px;
-      border-radius: 18px;
-      text-decoration: none;
-      color: #fff;
-      border: 1.5px solid var(--pink);
-      background: transparent;
-      box-shadow: 0 0 18px rgba(255, 37, 192, 0.15);
-      transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
-    }
-
-    .plugin:hover,
-    .plugin:focus-visible {
-      background: var(--pink);
-      color: #1a0214;
-      transform: translateY(-1px);
-      box-shadow: 0 0 28px rgba(255, 37, 192, 0.45);
-      outline: none;
-    }
-
-    .plugin h2 {
-      margin: 0 0 8px;
-      font-size: 1.05rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .plugin p {
-      margin: 0 0 10px;
-      font-size: 14px;
-      line-height: 1.5;
-      opacity: 0.85;
-    }
-
-    .plugin .meta {
-      font-size: 11px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      opacity: 0.75;
-    }
-
-    .plugin:hover p,
-    .plugin:focus-visible p,
-    .plugin:hover .meta,
-    .plugin:focus-visible .meta {
-      opacity: 0.9;
-    }
-
-    .mail {
-      display: inline-block;
-      margin-top: 28px;
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.45);
-      text-decoration: none;
-      letter-spacing: 0.02em;
-    }
-
-    .mail:hover,
-    .mail:focus-visible {
-      color: var(--pink-hot);
-      outline: none;
-    }
-  </style>
 </head>
 <body>
   <main>
-    <p class="byline">audio plugins</p>
-    <h1>SIGFRIDA</h1>
-    <p class="lead">Free plugins for bass and low end. Windows and Mac.</p>
-    <a class="plugin" href="https://prodsigfrida-stack.github.io/bass-harmonizer-updates/">
-      <h2>BASS HARMONIZER</h2>
-      <p>A bass pitch-harmonizer. Add a tuned second voice to bass, 808s, and low-end tracks.</p>
-      <span class="meta">Free · VST3 · AU · Windows + Mac</span>
-    </a>
-    <a class="mail" href="mailto:prod.sigfrida@gmail.com">prod.sigfrida@gmail.com</a>
+    <nav class="nav" aria-label="Site">
+      <a href="/" aria-current="page">Home</a>
+      <a href="https://prodsigfrida-stack.github.io/bass-harmonizer-updates/">Download</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+    <p class="byline">by sigfrida</p>
+    <h1>BASS HARMONIZER</h1>
+    <p class="lead">
+      BASS HARMONIZER is a free bass pitch-harmonizer plugin.
+      Put it on a bass, 808, or low-end track and it adds a second voice at a pitch you choose —
+      mix, harmonics, microshift, distortion, reverb, and vibrato sit on that harmony.
+    </p>
+    <ul class="features">
+      <li>Pitch harmony in semitone steps and octaves, with a wet/dry mix</li>
+      <li>Harmonics, microshift width, distortion, reverb, and vibrato on the pitched voice</li>
+      <li>Stable Pitch mode for cleaner tracking, mono below 250 Hz, and autogain</li>
+      <li>Free insert effect — VST3 on Windows, VST3 and Audio Unit on Mac</li>
+    </ul>
+    <p class="specs">Windows x64 VST3 · macOS universal VST3 + AU · Ableton, FL Studio, Logic, Reaper, GarageBand</p>
+    <a class="cta" href="https://prodsigfrida-stack.github.io/bass-harmonizer-updates/">Download</a>
   </main>
 </body>
 </html>

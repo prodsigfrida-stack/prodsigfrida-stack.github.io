@@ -1,5 +1,5 @@
-# SIGFRIDA
+# SIGFRIDA / BASS HARMONIZER
 
-Public landing for https://prodsigfrida-stack.github.io/
-
-Plugin downloads live at https://prodsigfrida-stack.github.io/bass-harmonizer-updates/
+- Home: https://prodsigfrida-stack.github.io/
+- Downloads: https://prodsigfrida-stack.github.io/bass-harmonizer-updates/
+- Contact: https://prodsigfrida-stack.github.io/contact/

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — SIGFRIDA / BASS HARMONIZER</title>
+  <meta name="description" content="Write to SIGFRIDA about BASS HARMONIZER. Feedback, questions, and notes go straight to the developer.">
+  <link rel="canonical" href="https://prodsigfrida-stack.github.io/contact/">
+  <link rel="stylesheet" href="../site.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact — SIGFRIDA / BASS HARMONIZER">
+  <meta property="og:description" content="Write to SIGFRIDA about BASS HARMONIZER. Feedback goes straight to the developer.">
+  <meta property="og:url" content="https://prodsigfrida-stack.github.io/contact/">
+</head>
+<body>
+  <main>
+    <nav class="nav" aria-label="Site">
+      <a href="/">Home</a>
+      <a href="https://prodsigfrida-stack.github.io/bass-harmonizer-updates/">Download</a>
+      <a href="/contact/" aria-current="page">Contact</a>
+    </nav>
+    <p class="byline">sigfrida</p>
+    <h1>Tell me what you think</h1>
+    <p class="note">This goes straight to me (the developer), not a company support desk.</p>
+    <p class="thanks" id="thanks" hidden>Thanks — I got your note.</p>
+    <form action="https://formsubmit.co/prod.sigfrida@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="BASS HARMONIZER feedback">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://prodsigfrida-stack.github.io/contact/?thanks=1">
+      <input type="hidden" name="_replyto" id="replyto" value="">
+      <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
+      <label>
+        Name <span class="opt">(optional)</span>
+        <input type="text" name="name" autocomplete="name">
+      </label>
+      <label>
+        Email <span class="opt">(optional)</span>
+        <input type="email" name="email" id="feedback-email" autocomplete="email">
+      </label>
+      <label>
+        Message
+        <textarea name="message" required rows="5"></textarea>
+      </label>
+      <button type="submit">Send</button>
+    </form>
+    <a class="mail" href="mailto:prod.sigfrida@gmail.com">prod.sigfrida@gmail.com</a>
+  </main>
+  <script>
+    if (new URLSearchParams(location.search).get("thanks") === "1") {
+      document.getElementById("thanks").hidden = false;
+    }
+    document.querySelector("form").addEventListener("submit", function () {
+      const email = (document.getElementById("feedback-email").value || "").trim();
+      document.getElementById("replyto").value = email;
+    });
+  </script>
+</body>
+</html>
