@@ -6,54 +6,92 @@
   <title>Contact — SIGFRIDA / BASS HARMONIZER</title>
   <meta name="description" content="Write to SIGFRIDA about BASS HARMONIZER. Feedback, questions, and notes go straight to the developer.">
   <link rel="canonical" href="https://prodsigfrida-stack.github.io/contact/">
-  <meta name="view-transition" content="same-origin">
-  <link rel="stylesheet" href="/site.css">
+  <link rel="stylesheet" href="/site.css?v=3">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Contact — SIGFRIDA / BASS HARMONIZER">
   <meta property="og:description" content="Write to SIGFRIDA about BASS HARMONIZER. Feedback goes straight to the developer.">
   <meta property="og:url" content="https://prodsigfrida-stack.github.io/contact/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "BASS HARMONIZER",
+    "applicationCategory": "MultimediaApplication",
+    "applicationSubCategory": "Audio plugin",
+    "operatingSystem": "Windows, macOS",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "author": { "@type": "Person", "name": "SIGFRIDA" },
+    "url": "https://prodsigfrida-stack.github.io/",
+    "downloadUrl": "https://prodsigfrida-stack.github.io/bass-harmonizer-updates/",
+    "description": "Free bass pitch-harmonizer plugin by SIGFRIDA. VST3 for Windows, VST3 and Audio Unit for macOS."
+  }
+  </script>
 </head>
 <body>
   <nav class="nav" aria-label="Site">
-    <a href="/">Home</a>
-    <a href="/bass-harmonizer-updates/">Download</a>
-    <a href="/contact/" aria-current="page">Contact</a>
+    <a href="/" data-go="home">Home</a>
+    <a href="/bass-harmonizer-updates/" data-go="download">Download</a>
+    <a href="/contact/" data-go="contact">Contact</a>
   </nav>
-  <main>
-    <p class="byline">by sigfrida</p>
-    <h1>CONTACT</h1>
-    <p class="note">This goes straight to me, not a support desk.</p>
-    <p class="thanks" id="thanks" hidden>Thanks — I got your note.</p>
-    <form action="https://formsubmit.co/prod.sigfrida@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="BASS HARMONIZER feedback">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://prodsigfrida-stack.github.io/contact/?thanks=1">
-      <input type="hidden" name="_replyto" id="replyto" value="">
-      <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
-      <label>
-        Name <span class="opt">(optional)</span>
-        <input type="text" name="name" autocomplete="name">
-      </label>
-      <label>
-        Email <span class="opt">(optional)</span>
-        <input type="email" name="email" id="feedback-email" autocomplete="email">
-      </label>
-      <label>
-        Message
-        <textarea name="message" required rows="4"></textarea>
-      </label>
-      <button type="submit">Send</button>
-    </form>
-  </main>
-  <script>
-    if (new URLSearchParams(location.search).get("thanks") === "1") {
-      document.getElementById("thanks").hidden = false;
-    }
-    document.querySelector("form").addEventListener("submit", function () {
-      const email = (document.getElementById("feedback-email").value || "").trim();
-      document.getElementById("replyto").value = email;
-    });
-  </script>
+  <div class="stage">
+    <section class="panel" data-page="home">
+      <div class="card">
+        <p class="byline">by sigfrida</p>
+        <h1>BASS HARMONIZER</h1>
+        <p class="lead">
+          A free bass pitch-harmonizer. Put it on a bass, 808, or low-end track and it adds a second voice at a pitch you choose.
+        </p>
+        <ul class="features">
+          <li>Pitch steps and octaves, with a wet/dry mix</li>
+          <li>Harmonics, microshift, distortion, reverb, vibrato</li>
+          <li>Stable Pitch, mono below 250 Hz, autogain</li>
+          <li>VST3 on Windows · VST3 + AU on Mac</li>
+        </ul>
+        <p class="specs">Ableton, FL Studio, Logic, Reaper, GarageBand</p>
+        <a class="cta" href="/bass-harmonizer-updates/" data-go="download">Download</a>
+      </div>
+    </section>
+    <section class="panel" data-page="download">
+      <div class="card">
+        <p class="byline">by sigfrida</p>
+        <h1>BASS HARMONIZER</h1>
+        <p class="version" id="version"></p>
+        <div class="downloads">
+          <a class="os" id="win" href="https://github.com/prodsigfrida-stack/bass-harmonizer-updates/releases/download/latest/BASS-HARMONIZER_Windows_x64_VST3.zip">Windows</a>
+          <a class="os" id="mac" href="https://github.com/prodsigfrida-stack/bass-harmonizer-updates/releases/download/latest/BASS-HARMONIZER-macOS-VST3.zip">Mac</a>
+        </div>
+      </div>
+    </section>
+    <section class="panel" data-page="contact">
+      <div class="card">
+        <p class="byline">by sigfrida</p>
+        <h1>CONTACT</h1>
+        <p class="note">This goes straight to me, not a support desk.</p>
+        <p class="thanks" id="thanks" hidden>Thanks — I got your note.</p>
+        <form action="https://formsubmit.co/prod.sigfrida@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="BASS HARMONIZER feedback">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://prodsigfrida-stack.github.io/contact/?thanks=1">
+          <input type="hidden" name="_replyto" id="replyto" value="">
+          <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
+          <label>
+            Name <span class="opt">(optional)</span>
+            <input type="text" name="name" autocomplete="name">
+          </label>
+          <label>
+            Email <span class="opt">(optional)</span>
+            <input type="email" name="email" id="feedback-email" autocomplete="email">
+          </label>
+          <label>
+            Message
+            <textarea name="message" required rows="4"></textarea>
+          </label>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </div>
+  <script src="/site.js?v=3"></script>
 </body>
 </html>
